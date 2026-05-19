@@ -3,28 +3,28 @@ export default function Home() {
     {
       title: "Πυρασφάλεια",
       image:
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1400&auto=format&fit=crop",
       description:
         "Μελέτες πυροπροστασίας, sprinkler, πυρανίχνευση και ολοκληρωμένες λύσεις ενεργητικής και παθητικής πυρασφάλειας."
     },
     {
       title: "Η/Μ Μελέτες",
       image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1400&auto=format&fit=crop",
       description:
         "Σχεδιασμός και μελέτες ηλεκτρομηχανολογικών εγκαταστάσεων με σύγχρονη προσέγγιση και τεχνική αξιοπιστία."
     },
     {
       title: "ΠΕΑ",
       image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1400&auto=format&fit=crop",
       description:
         "Έκδοση Πιστοποιητικών Ενεργειακής Απόδοσης για κατοικίες και επαγγελματικούς χώρους."
     },
     {
       title: "ΥΔΕ",
       image:
-        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1400&auto=format&fit=crop",
       description:
         "Υπεύθυνες Δηλώσεις Ηλεκτρολόγου Εγκαταστάτη για κατοικίες, επαγγελματικούς χώρους και επιχειρήσεις."
     }
@@ -47,7 +47,7 @@ export default function Home() {
           position: "sticky",
           top: 0,
           backdropFilter: "blur(12px)",
-          background: "rgba(2,8,23,0.75)",
+          background: "rgba(2,8,23,0.85)",
           zIndex: 100
         }}
       >
@@ -65,27 +65,29 @@ export default function Home() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "14px"
+              gap: "16px"
             }}
           >
             <img
-              src="https://i.imgur.com/Bm7Q2lR.png"
+              src="https://i.imgur.com/Tx6P6Qp.png"
               alt="NS Engineering"
               style={{
-                width: "70px",
+                width: "95px",
                 objectFit: "contain"
               }}
             />
 
-            <h2
-              style={{
-                margin: 0,
-                fontSize: "30px",
-                fontWeight: "bold"
-              }}
-            >
-              NS Engineering
-            </h2>
+            <div>
+              <h2
+                style={{
+                  margin: 0,
+                  fontSize: "30px",
+                  fontWeight: "bold"
+                }}
+              >
+                NS Engineering
+              </h2>
+            </div>
           </div>
 
           <nav
@@ -190,14 +192,14 @@ export default function Home() {
 
         <div>
           <img
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop"
             alt=""
             style={{
               width: "100%",
               borderRadius: "28px",
               height: "650px",
               objectFit: "cover",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.4)"
+              boxShadow: "0 20px 60px rgba(0,0,0,0.45)"
             }}
           />
         </div>
@@ -209,7 +211,7 @@ export default function Home() {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "30px 40px 100px"
+          padding: "20px 40px 100px"
         }}
       >
         <div
