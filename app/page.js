@@ -34,7 +34,7 @@ export default function Home() {
     <main
       style={{
         background:
-          "radial-gradient(circle at top, #07122d 0%, #020617 70%)",
+          "radial-gradient(circle at top,#081633 0%,#020617 70%)",
         minHeight: "100vh",
         color: "white",
         fontFamily: "Arial, sans-serif"
@@ -46,12 +46,12 @@ export default function Home() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "16px 40px",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
-          background: "rgba(2,6,23,0.9)",
+          padding: "18px 45px",
+          borderBottom: "1px solid rgba(255,255,255,0.06)",
+          background: "rgba(2,6,23,0.92)",
           position: "sticky",
           top: 0,
-          zIndex: 100,
+          zIndex: 999,
           backdropFilter: "blur(10px)"
         }}
       >
@@ -66,7 +66,7 @@ export default function Home() {
             src="https://i.imgur.com/o6K8l2D.png"
             alt="logo"
             style={{
-              width: "95px",
+              width: "105px",
               objectFit: "contain"
             }}
           />
@@ -74,7 +74,7 @@ export default function Home() {
           <h2
             style={{
               margin: 0,
-              fontSize: "32px",
+              fontSize: "34px",
               fontWeight: "bold"
             }}
           >
@@ -89,19 +89,19 @@ export default function Home() {
             gap: "35px"
           }}
         >
-          <a href="#services" style={navStyle}>
+          <a href="#services" style={navLink}>
             Υπηρεσίες
           </a>
 
-          <a href="#about" style={navStyle}>
+          <a href="#about" style={navLink}>
             Σχετικά
           </a>
 
-          <a href="#contact" style={navStyle}>
+          <a href="#contact" style={navLink}>
             Επικοινωνία
           </a>
 
-          <a href="#contact" style={topBtn}>
+          <a href="#contact" style={headerBtn}>
             Επικοινωνήστε μαζί μας
           </a>
         </nav>
@@ -112,7 +112,7 @@ export default function Home() {
         style={{
           maxWidth: "1450px",
           margin: "auto",
-          padding: "70px 40px",
+          padding: "70px 45px",
           display: "grid",
           gridTemplateColumns: "1fr 1.1fr",
           gap: "55px",
@@ -122,7 +122,7 @@ export default function Home() {
         <div>
           <div
             style={{
-              color: "#4d7cff",
+              color: "#4f7dff",
               fontWeight: "bold",
               letterSpacing: "2px",
               marginBottom: "18px",
@@ -134,7 +134,7 @@ export default function Home() {
 
           <h1
             style={{
-              fontSize: "84px",
+              fontSize: "88px",
               lineHeight: "0.95",
               marginTop: 0,
               marginBottom: "30px"
@@ -145,10 +145,10 @@ export default function Home() {
 
           <p
             style={{
-              color: "#cbd5e1",
-              fontSize: "27px",
+              fontSize: "28px",
               lineHeight: "1.8",
-              maxWidth: "650px"
+              color: "#cbd5e1",
+              maxWidth: "700px"
             }}
           >
             Σύγχρονες μηχανολογικές, ενεργειακές και
@@ -179,9 +179,9 @@ export default function Home() {
             alt=""
             style={{
               width: "100%",
-              borderRadius: "28px",
+              borderRadius: "30px",
               objectFit: "cover",
-              boxShadow: "0 20px 70px rgba(0,0,0,0.45)"
+              boxShadow: "0 25px 70px rgba(0,0,0,0.45)"
             }}
           />
         </div>
@@ -193,7 +193,7 @@ export default function Home() {
         style={{
           maxWidth: "1450px",
           margin: "auto",
-          padding: "20px 40px 100px"
+          padding: "20px 45px 100px"
         }}
       >
         <div
@@ -204,10 +204,10 @@ export default function Home() {
         >
           <div
             style={{
-              color: "#4d7cff",
+              color: "#4f7dff",
               fontWeight: "bold",
               letterSpacing: "2px",
-              marginBottom: "12px"
+              marginBottom: "10px"
             }}
           >
             ΥΠΗΡΕΣΙΕΣ
@@ -215,7 +215,7 @@ export default function Home() {
 
           <h2
             style={{
-              fontSize: "64px",
+              fontSize: "68px",
               marginTop: 0,
               marginBottom: "25px"
             }}
@@ -225,10 +225,10 @@ export default function Home() {
 
           <p
             style={{
-              color: "#cbd5e1",
               fontSize: "23px",
               lineHeight: "1.8",
-              maxWidth: "900px",
+              color: "#cbd5e1",
+              maxWidth: "950px",
               margin: "auto"
             }}
           >
@@ -250,11 +250,11 @@ export default function Home() {
               key={index}
               style={{
                 background:
-                  "linear-gradient(180deg,#0a1330 0%, #060d22 100%)",
+                  "linear-gradient(180deg,#09132d 0%, #050b1c 100%)",
                 borderRadius: "28px",
                 overflow: "hidden",
                 border: "1px solid rgba(255,255,255,0.06)",
-                boxShadow: "0 15px 50px rgba(0,0,0,0.35)"
+                boxShadow: "0 15px 45px rgba(0,0,0,0.35)"
               }}
             >
               <img
@@ -262,7 +262,7 @@ export default function Home() {
                 alt=""
                 style={{
                   width: "100%",
-                  height: "250px",
+                  height: "260px",
                   objectFit: "cover"
                 }}
               />
@@ -270,9 +270,9 @@ export default function Home() {
               <div style={{ padding: "34px" }}>
                 <h3
                   style={{
-                    fontSize: "40px",
+                    fontSize: "42px",
                     marginTop: 0,
-                    marginBottom: "20px"
+                    marginBottom: "22px"
                   }}
                 >
                   {service.title}
@@ -290,10 +290,10 @@ export default function Home() {
 
                 <div
                   style={{
-                    marginTop: "25px",
-                    color: "#4d7cff",
+                    marginTop: "28px",
+                    color: "#4f7dff",
                     fontWeight: "bold",
-                    fontSize: "19px"
+                    fontSize: "20px"
                   }}
                 >
                   Περισσότερα →
@@ -310,13 +310,13 @@ export default function Home() {
         style={{
           maxWidth: "1450px",
           margin: "auto",
-          padding: "0 40px 70px"
+          padding: "0 45px 80px"
         }}
       >
         <div
           style={{
             background:
-              "linear-gradient(135deg,#0b132f 0%, #070d20 100%)",
+              "linear-gradient(135deg,#0b132f 0%, #060d22 100%)",
             borderRadius: "30px",
             padding: "45px 50px",
             display: "grid",
@@ -329,7 +329,7 @@ export default function Home() {
           <div>
             <h3
               style={{
-                fontSize: "38px",
+                fontSize: "40px",
                 marginTop: 0,
                 marginBottom: "15px"
               }}
@@ -340,7 +340,7 @@ export default function Home() {
             <p
               style={{
                 color: "#cbd5e1",
-                fontSize: "21px",
+                fontSize: "22px",
                 lineHeight: "1.8"
               }}
             >
@@ -353,7 +353,7 @@ export default function Home() {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "16px",
+              gap: "18px",
               color: "#cbd5e1",
               fontSize: "20px"
             }}
@@ -373,7 +373,7 @@ export default function Home() {
       <footer
         style={{
           borderTop: "1px solid rgba(255,255,255,0.06)",
-          padding: "25px 40px",
+          padding: "25px 45px",
           display: "flex",
           justifyContent: "space-between",
           color: "#94a3b8",
@@ -391,14 +391,14 @@ export default function Home() {
   );
 }
 
-const navStyle = {
+const navLink = {
   color: "white",
   textDecoration: "none",
   fontSize: "18px",
   fontWeight: "500"
 };
 
-const topBtn = {
+const headerBtn = {
   background: "#4361ee",
   color: "white",
   padding: "14px 22px",
