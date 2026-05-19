@@ -3,29 +3,29 @@ export default function Home() {
     {
       title: "Πυρασφάλεια",
       image:
-        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1400&auto=format&fit=crop",
-      description:
+        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
+      text:
         "Μελέτες πυροπροστασίας, sprinkler, πυρανίχνευση και ολοκληρωμένες λύσεις ενεργητικής και παθητικής πυρασφάλειας."
     },
     {
       title: "Η/Μ Μελέτες",
       image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1400&auto=format&fit=crop",
-      description:
-        "Σχεδιασμός και μελέτες ηλεκτρομηχανολογικών εγκαταστάσεων με σύγχρονη προσέγγιση και τεχνική αξιοπιστία."
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+      text:
+        "Μελέτες ηλεκτρομηχανολογικών εγκαταστάσεων με σύγχρονη τεχνική προσέγγιση και αξιοπιστία."
     },
     {
       title: "ΠΕΑ",
       image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1400&auto=format&fit=crop",
-      description:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop",
+      text:
         "Έκδοση Πιστοποιητικών Ενεργειακής Απόδοσης για κατοικίες και επαγγελματικούς χώρους."
     },
     {
       title: "ΥΔΕ",
       image:
-        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1400&auto=format&fit=crop",
-      description:
+        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop",
+      text:
         "Υπεύθυνες Δηλώσεις Ηλεκτρολόγου Εγκαταστάτη για κατοικίες, επαγγελματικούς χώρους και επιχειρήσεις."
     }
   ];
@@ -34,104 +34,86 @@ export default function Home() {
     <main
       style={{
         background:
-          "radial-gradient(circle at top, #071a44 0%, #020817 60%)",
+          "radial-gradient(circle at top, #0d1b4d 0%, #020617 70%)",
         color: "white",
         minHeight: "100vh",
         fontFamily: "Arial, sans-serif"
       }}
     >
-      {/* NAVBAR */}
+      {/* HEADER */}
       <header
         style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "20px 60px",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
           position: "sticky",
           top: 0,
-          backdropFilter: "blur(12px)",
-          background: "rgba(2,8,23,0.85)",
-          zIndex: 100
+          background: "rgba(2,6,23,0.9)",
+          backdropFilter: "blur(10px)",
+          zIndex: 10
         }}
       >
-        <div
+        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+          <img
+            src="https://i.imgur.com/o6K8l2D.png"
+            alt="NS Engineering"
+            style={{
+              width: "70px",
+              objectFit: "contain"
+            }}
+          />
+
+          <div
+            style={{
+              fontSize: "28px",
+              fontWeight: "bold"
+            }}
+          >
+            NS Engineering
+          </div>
+        </div>
+
+        <nav
           style={{
-            maxWidth: "1400px",
-            margin: "0 auto",
-            padding: "18px 40px",
             display: "flex",
-            justifyContent: "space-between",
+            gap: "30px",
             alignItems: "center"
           }}
         >
-          <div
+          <a href="#services" style={navStyle}>
+            Υπηρεσίες
+          </a>
+          <a href="#about" style={navStyle}>
+            Σχετικά
+          </a>
+          <a href="#contact" style={navStyle}>
+            Επικοινωνία
+          </a>
+
+          <a
+            href="#contact"
             style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "16px"
+              background: "#4361ee",
+              padding: "12px 20px",
+              borderRadius: "12px",
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "bold"
             }}
           >
-            <img
-              src="https://i.imgur.com/Tx6P6Qp.png"
-              alt="NS Engineering"
-              style={{
-                width: "95px",
-                objectFit: "contain"
-              }}
-            />
-
-            <div>
-              <h2
-                style={{
-                  margin: 0,
-                  fontSize: "30px",
-                  fontWeight: "bold"
-                }}
-              >
-                NS Engineering
-              </h2>
-            </div>
-          </div>
-
-          <nav
-            style={{
-              display: "flex",
-              gap: "35px",
-              alignItems: "center"
-            }}
-          >
-            <a href="#services" style={navStyle}>
-              Υπηρεσίες
-            </a>
-
-            <a href="#about" style={navStyle}>
-              Σχετικά
-            </a>
-
-            <a href="#contact" style={navStyle}>
-              Επικοινωνία
-            </a>
-
-            <a
-              href="#contact"
-              style={{
-                background: "#2563eb",
-                padding: "14px 24px",
-                borderRadius: "14px",
-                color: "white",
-                textDecoration: "none",
-                fontWeight: "bold"
-              }}
-            >
-              Επικοινωνήστε μαζί μας
-            </a>
-          </nav>
-        </div>
+            Επικοινωνήστε μαζί μας
+          </a>
+        </nav>
       </header>
 
       {/* HERO */}
       <section
         style={{
           maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "90px 40px",
+          margin: "auto",
+          padding: "100px 60px",
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "70px",
@@ -139,21 +121,21 @@ export default function Home() {
         }}
       >
         <div>
-          <p
+          <div
             style={{
-              color: "#3b82f6",
+              color: "#4ea1ff",
               fontWeight: "bold",
               letterSpacing: "2px",
               marginBottom: "20px"
             }}
           >
             ΜΗΧΑΝΟΛΟΓΟΣ ΜΗΧΑΝΙΚΟΣ
-          </p>
+          </div>
 
           <h1
             style={{
-              fontSize: "84px",
-              lineHeight: 1,
+              fontSize: "82px",
+              lineHeight: "1",
               marginBottom: "30px"
             }}
           >
@@ -162,22 +144,21 @@ export default function Home() {
 
           <p
             style={{
-              fontSize: "28px",
-              lineHeight: 1.7,
+              fontSize: "25px",
+              lineHeight: "1.8",
               color: "#cbd5e1",
               maxWidth: "700px"
             }}
           >
-            Σύγχρονες μηχανολογικές, ενεργειακές και
-            πυροπροστασίας λύσεις με επαγγελματισμό,
-            αξιοπιστία και τεχνική ευθύνη.
+            Σύγχρονες μηχανολογικές, ενεργειακές και πυροπροστασίας
+            λύσεις με επαγγελματισμό, αξιοπιστία και τεχνική ευθύνη.
           </p>
 
           <div
             style={{
-              marginTop: "45px",
               display: "flex",
-              gap: "20px"
+              gap: "20px",
+              marginTop: "40px"
             }}
           >
             <a href="#services" style={primaryBtn}>
@@ -192,14 +173,12 @@ export default function Home() {
 
         <div>
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400&auto=format&fit=crop"
             alt=""
             style={{
               width: "100%",
-              borderRadius: "28px",
-              height: "650px",
-              objectFit: "cover",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.45)"
+              borderRadius: "30px",
+              boxShadow: "0 25px 80px rgba(0,0,0,0.45)"
             }}
           />
         </div>
@@ -210,8 +189,8 @@ export default function Home() {
         id="services"
         style={{
           maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "20px 40px 100px"
+          margin: "auto",
+          padding: "40px 60px 120px"
         }}
       >
         <div
@@ -220,20 +199,21 @@ export default function Home() {
             marginBottom: "70px"
           }}
         >
-          <p
+          <div
             style={{
-              color: "#3b82f6",
+              color: "#4ea1ff",
               fontWeight: "bold",
+              marginBottom: "10px",
               letterSpacing: "2px"
             }}
           >
             ΥΠΗΡΕΣΙΕΣ
-          </p>
+          </div>
 
           <h2
             style={{
-              fontSize: "64px",
-              margin: "10px 0 20px"
+              fontSize: "60px",
+              marginBottom: "20px"
             }}
           >
             Υπηρεσίες
@@ -242,58 +222,49 @@ export default function Home() {
           <p
             style={{
               color: "#cbd5e1",
-              maxWidth: "900px",
-              margin: "0 auto",
-              fontSize: "24px",
-              lineHeight: 1.7
+              fontSize: "22px",
+              maxWidth: "850px",
+              margin: "auto",
+              lineHeight: "1.8"
             }}
           >
-            Ολοκληρωμένες υπηρεσίες μηχανολογικού
-            σχεδιασμού και τεχνικών λύσεων με έμφαση
-            στην ποιότητα, την ασφάλεια και την
-            αξιοπιστία.
+            Ολοκληρωμένες υπηρεσίες μηχανολογικού σχεδιασμού και τεχνικών
+            λύσεων με έμφαση στην ποιότητα, την ασφάλεια και την αξιοπιστία.
           </p>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "40px"
+            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+            gap: "35px"
           }}
         >
           {services.map((service, index) => (
             <div
               key={index}
               style={{
-                background:
-                  "linear-gradient(180deg,#0f172a,#07142d)",
+                background: "rgba(15,23,42,0.85)",
                 borderRadius: "28px",
                 overflow: "hidden",
-                border:
-                  "1px solid rgba(255,255,255,0.08)",
-                boxShadow:
-                  "0 10px 40px rgba(0,0,0,0.3)"
+                border: "1px solid rgba(255,255,255,0.08)",
+                transition: "0.3s"
               }}
             >
               <img
                 src={service.image}
-                alt={service.title}
+                alt=""
                 style={{
                   width: "100%",
-                  height: "280px",
+                  height: "260px",
                   objectFit: "cover"
                 }}
               />
 
-              <div
-                style={{
-                  padding: "35px"
-                }}
-              >
+              <div style={{ padding: "35px" }}>
                 <h3
                   style={{
-                    fontSize: "38px",
+                    fontSize: "36px",
                     marginBottom: "20px"
                   }}
                 >
@@ -303,26 +274,12 @@ export default function Home() {
                 <p
                   style={{
                     color: "#cbd5e1",
-                    lineHeight: 1.8,
-                    fontSize: "22px"
-                  }}
-                >
-                  {service.description}
-                </p>
-
-                <a
-                  href="#contact"
-                  style={{
-                    display: "inline-block",
-                    marginTop: "28px",
-                    color: "#3b82f6",
-                    textDecoration: "none",
-                    fontWeight: "bold",
+                    lineHeight: "1.9",
                     fontSize: "20px"
                   }}
                 >
-                  Περισσότερα →
-                </a>
+                  {service.text}
+                </p>
               </div>
             </div>
           ))}
@@ -334,53 +291,50 @@ export default function Home() {
         id="about"
         style={{
           maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "20px 40px 100px"
+          margin: "auto",
+          padding: "0 60px 120px"
         }}
       >
         <div
           style={{
             background:
-              "linear-gradient(135deg,#07142d,#0f172a)",
-            borderRadius: "30px",
+              "linear-gradient(135deg, rgba(30,41,59,0.95), rgba(15,23,42,0.95))",
+            borderRadius: "35px",
             padding: "70px",
-            border:
-              "1px solid rgba(255,255,255,0.08)"
+            border: "1px solid rgba(255,255,255,0.08)"
           }}
         >
-          <p
+          <div
             style={{
-              color: "#3b82f6",
+              color: "#4ea1ff",
               fontWeight: "bold",
+              marginBottom: "10px",
               letterSpacing: "2px"
             }}
           >
             ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ
-          </p>
+          </div>
 
           <h2
             style={{
               fontSize: "54px",
-              marginTop: "15px"
+              marginBottom: "30px"
             }}
           >
-            Μηχανική με ευθύνη
+            Τεχνικές υπηρεσίες με υπευθυνότητα
           </h2>
 
           <p
             style={{
+              fontSize: "23px",
+              lineHeight: "2",
               color: "#cbd5e1",
-              lineHeight: 1.9,
-              fontSize: "24px",
               maxWidth: "1000px"
             }}
           >
-            Η NS Engineering προσφέρει σύγχρονες
-            τεχνικές λύσεις με έμφαση στην ποιότητα,
-            την ασφάλεια και την άμεση εξυπηρέτηση.
-            Στόχος μας είναι η παροχή υπεύθυνων και
-            αξιόπιστων υπηρεσιών για κατοικίες,
-            επαγγελματικούς χώρους και επιχειρήσεις.
+            Η NS Engineering παρέχει σύγχρονες και αξιόπιστες τεχνικές
+            υπηρεσίες σε ιδιώτες και επαγγελματίες, με έμφαση στην ποιότητα,
+            την ασφάλεια και τη σωστή τεχνική υποστήριξη κάθε έργου.
           </p>
         </div>
       </section>
@@ -390,66 +344,58 @@ export default function Home() {
         id="contact"
         style={{
           maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 40px 100px"
+          margin: "auto",
+          padding: "0 60px 120px"
         }}
       >
         <div
           style={{
             background:
-              "linear-gradient(135deg,#07142d,#0f172a)",
-            borderRadius: "30px",
+              "linear-gradient(135deg, rgba(17,24,39,0.95), rgba(15,23,42,0.95))",
+            borderRadius: "35px",
             padding: "60px",
-            display: "grid",
-            gridTemplateColumns: "1.2fr 1fr 1fr",
-            gap: "50px",
-            alignItems: "center",
-            border:
-              "1px solid rgba(255,255,255,0.08)"
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: "30px",
+            border: "1px solid rgba(255,255,255,0.08)"
           }}
         >
           <div>
-            <h2
+            <h3
               style={{
-                fontSize: "48px",
-                marginBottom: "20px"
+                fontSize: "42px",
+                marginBottom: "15px"
               }}
             >
               Επικοινωνήστε μαζί μας
-            </h2>
+            </h3>
 
             <p
               style={{
                 color: "#cbd5e1",
-                lineHeight: 1.8,
-                fontSize: "22px"
+                fontSize: "21px",
+                lineHeight: "1.8"
               }}
             >
               Είμαστε στη διάθεσή σας για μελέτες,
+              <br />
               αδειοδοτήσεις και τεχνικές λύσεις.
             </p>
           </div>
 
           <div
             style={{
-              color: "#cbd5e1",
-              lineHeight: 2.2,
-              fontSize: "22px"
+              display: "flex",
+              flexDirection: "column",
+              gap: "18px",
+              fontSize: "21px",
+              color: "#cbd5e1"
             }}
           >
             <div>📞 +30 69XX XXX XXX</div>
             <div>✉️ nsengineering@email.com</div>
             <div>📍 Αθήνα, Ελλάδα</div>
-          </div>
-
-          <div
-            style={{
-              textAlign: "right"
-            }}
-          >
-            <a href="mailto:nsengineering@email.com" style={primaryBtn}>
-              Επικοινωνία
-            </a>
           </div>
         </div>
       </section>
@@ -457,25 +403,19 @@ export default function Home() {
       {/* FOOTER */}
       <footer
         style={{
-          borderTop:
-            "1px solid rgba(255,255,255,0.08)",
-          padding: "30px 40px",
+          borderTop: "1px solid rgba(255,255,255,0.08)",
+          padding: "30px 60px",
           color: "#94a3b8",
           display: "flex",
-          justifyContent: "space-between",
-          maxWidth: "1400px",
-          margin: "0 auto"
+          justifyContent: "space-between"
         }}
       >
-        <div>
-          © 2024 NS Engineering. Όλα τα δικαιώματα
-          διατηρούνται.
-        </div>
+        <div>© 2024 NS Engineering</div>
 
         <div
           style={{
             display: "flex",
-            gap: "20px"
+            gap: "25px"
           }}
         >
           <span>Πολιτική Απορρήτου</span>
@@ -489,27 +429,25 @@ export default function Home() {
 const navStyle = {
   color: "white",
   textDecoration: "none",
-  fontSize: "18px"
+  fontWeight: "500"
 };
 
 const primaryBtn = {
-  background: "#2563eb",
-  padding: "18px 34px",
-  borderRadius: "16px",
+  background: "#4361ee",
+  padding: "18px 30px",
+  borderRadius: "14px",
   color: "white",
   textDecoration: "none",
   fontWeight: "bold",
-  display: "inline-block",
-  fontSize: "20px"
+  fontSize: "18px"
 };
 
 const secondaryBtn = {
   border: "1px solid rgba(255,255,255,0.25)",
-  padding: "18px 34px",
-  borderRadius: "16px",
+  padding: "18px 30px",
+  borderRadius: "14px",
   color: "white",
   textDecoration: "none",
   fontWeight: "bold",
-  display: "inline-block",
-  fontSize: "20px"
+  fontSize: "18px"
 };
