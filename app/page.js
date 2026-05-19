@@ -1,4 +1,3 @@
-```jsx
 export default function Home() {
   const services = [
     "Πυρασφάλεια",
@@ -51,9 +50,11 @@ export default function Home() {
             <a href="#services" style={linkStyle}>
               Υπηρεσίες
             </a>
+
             <a href="#about" style={linkStyle}>
               Σχετικά
             </a>
+
             <a href="#contact" style={linkStyle}>
               Επικοινωνία
             </a>
@@ -224,7 +225,6 @@ export default function Home() {
                 border: "1px solid rgba(255,255,255,0.06)",
                 borderRadius: "24px",
                 padding: "35px",
-                transition: "0.3s",
               }}
             >
               <div
@@ -376,4 +376,3 @@ const statText = {
   color: "#cbd5e1",
   margin: 0,
 };
-```
