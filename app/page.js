@@ -10,7 +10,7 @@ export default function Home() {
     {
       title: "Η/Μ Μελέτες",
       image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
       text:
         "Σχεδιασμός και μελέτες ηλεκτρομηχανολογικών εγκαταστάσεων με σύγχρονη προσέγγιση και τεχνική αξιοπιστία."
     },
@@ -34,7 +34,7 @@ export default function Home() {
     <main
       style={{
         background:
-          "radial-gradient(circle at top,#08122f 0%,#020617 70%)",
+          "radial-gradient(circle at top, #07122d 0%, #020617 70%)",
         minHeight: "100vh",
         color: "white",
         fontFamily: "Arial, sans-serif"
@@ -46,29 +46,35 @@ export default function Home() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "18px 40px",
+          padding: "16px 40px",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
+          background: "rgba(2,6,23,0.9)",
           position: "sticky",
           top: 0,
-          background: "rgba(2,6,23,0.9)",
-          backdropFilter: "blur(10px)",
-          zIndex: 100
+          zIndex: 100,
+          backdropFilter: "blur(10px)"
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "18px"
+          }}
+        >
           <img
             src="https://i.imgur.com/o6K8l2D.png"
             alt="logo"
             style={{
-              width: "90px",
+              width: "95px",
               objectFit: "contain"
             }}
           />
 
           <h2
             style={{
-              fontSize: "34px",
               margin: 0,
+              fontSize: "32px",
               fontWeight: "bold"
             }}
           >
@@ -104,23 +110,23 @@ export default function Home() {
       {/* HERO */}
       <section
         style={{
-          maxWidth: "1500px",
+          maxWidth: "1450px",
           margin: "auto",
           padding: "70px 40px",
           display: "grid",
-          gridTemplateColumns: "1fr 1.2fr",
-          gap: "50px",
+          gridTemplateColumns: "1fr 1.1fr",
+          gap: "55px",
           alignItems: "center"
         }}
       >
         <div>
           <div
             style={{
-              color: "#4b7cff",
+              color: "#4d7cff",
               fontWeight: "bold",
-              marginBottom: "18px",
               letterSpacing: "2px",
-              fontSize: "15px"
+              marginBottom: "18px",
+              fontSize: "14px"
             }}
           >
             ΜΗΧΑΝΟΛΟΓΟΣ ΜΗΧΑΝΙΚΟΣ
@@ -128,10 +134,10 @@ export default function Home() {
 
           <h1
             style={{
-              fontSize: "86px",
+              fontSize: "84px",
               lineHeight: "0.95",
-              marginBottom: "30px",
-              marginTop: 0
+              marginTop: 0,
+              marginBottom: "30px"
             }}
           >
             NS Engineering
@@ -140,9 +146,9 @@ export default function Home() {
           <p
             style={{
               color: "#cbd5e1",
-              fontSize: "28px",
+              fontSize: "27px",
               lineHeight: "1.8",
-              maxWidth: "700px"
+              maxWidth: "650px"
             }}
           >
             Σύγχρονες μηχανολογικές, ενεργειακές και
@@ -157,11 +163,11 @@ export default function Home() {
               marginTop: "40px"
             }}
           >
-            <a href="#services" style={heroBtn}>
+            <a href="#services" style={mainBtn}>
               Οι Υπηρεσίες μας →
             </a>
 
-            <a href="#contact" style={heroOutline}>
+            <a href="#contact" style={outlineBtn}>
               Επικοινωνία
             </a>
           </div>
@@ -175,7 +181,7 @@ export default function Home() {
               width: "100%",
               borderRadius: "28px",
               objectFit: "cover",
-              boxShadow: "0 25px 80px rgba(0,0,0,0.5)"
+              boxShadow: "0 20px 70px rgba(0,0,0,0.45)"
             }}
           />
         </div>
@@ -185,23 +191,23 @@ export default function Home() {
       <section
         id="services"
         style={{
-          maxWidth: "1500px",
+          maxWidth: "1450px",
           margin: "auto",
-          padding: "20px 40px 120px"
+          padding: "20px 40px 100px"
         }}
       >
         <div
           style={{
             textAlign: "center",
-            marginBottom: "70px"
+            marginBottom: "65px"
           }}
         >
           <div
             style={{
-              color: "#4b7cff",
+              color: "#4d7cff",
               fontWeight: "bold",
               letterSpacing: "2px",
-              marginBottom: "10px"
+              marginBottom: "12px"
             }}
           >
             ΥΠΗΡΕΣΙΕΣ
@@ -219,10 +225,10 @@ export default function Home() {
 
           <p
             style={{
-              fontSize: "24px",
               color: "#cbd5e1",
+              fontSize: "23px",
               lineHeight: "1.8",
-              maxWidth: "950px",
+              maxWidth: "900px",
               margin: "auto"
             }}
           >
@@ -244,7 +250,7 @@ export default function Home() {
               key={index}
               style={{
                 background:
-                  "linear-gradient(180deg,rgba(10,18,40,0.98),rgba(6,12,30,0.98))",
+                  "linear-gradient(180deg,#0a1330 0%, #060d22 100%)",
                 borderRadius: "28px",
                 overflow: "hidden",
                 border: "1px solid rgba(255,255,255,0.06)",
@@ -256,17 +262,17 @@ export default function Home() {
                 alt=""
                 style={{
                   width: "100%",
-                  height: "270px",
+                  height: "250px",
                   objectFit: "cover"
                 }}
               />
 
-              <div style={{ padding: "35px" }}>
+              <div style={{ padding: "34px" }}>
                 <h3
                   style={{
-                    fontSize: "42px",
+                    fontSize: "40px",
                     marginTop: 0,
-                    marginBottom: "22px"
+                    marginBottom: "20px"
                   }}
                 >
                   {service.title}
@@ -275,8 +281,8 @@ export default function Home() {
                 <p
                   style={{
                     color: "#cbd5e1",
-                    fontSize: "22px",
-                    lineHeight: "1.9"
+                    lineHeight: "1.9",
+                    fontSize: "21px"
                   }}
                 >
                   {service.text}
@@ -284,10 +290,10 @@ export default function Home() {
 
                 <div
                   style={{
-                    marginTop: "28px",
-                    color: "#4b7cff",
+                    marginTop: "25px",
+                    color: "#4d7cff",
                     fontWeight: "bold",
-                    fontSize: "20px"
+                    fontSize: "19px"
                   }}
                 >
                   Περισσότερα →
@@ -302,28 +308,28 @@ export default function Home() {
       <section
         id="contact"
         style={{
-          maxWidth: "1500px",
+          maxWidth: "1450px",
           margin: "auto",
-          padding: "0 40px 80px"
+          padding: "0 40px 70px"
         }}
       >
         <div
           style={{
             background:
-              "linear-gradient(135deg,rgba(17,24,39,0.95),rgba(9,15,35,0.95))",
+              "linear-gradient(135deg,#0b132f 0%, #070d20 100%)",
             borderRadius: "30px",
             padding: "45px 50px",
             display: "grid",
             gridTemplateColumns: "1.2fr 1fr auto",
-            alignItems: "center",
             gap: "40px",
+            alignItems: "center",
             border: "1px solid rgba(255,255,255,0.06)"
           }}
         >
           <div>
             <h3
               style={{
-                fontSize: "40px",
+                fontSize: "38px",
                 marginTop: 0,
                 marginBottom: "15px"
               }}
@@ -334,7 +340,7 @@ export default function Home() {
             <p
               style={{
                 color: "#cbd5e1",
-                fontSize: "22px",
+                fontSize: "21px",
                 lineHeight: "1.8"
               }}
             >
@@ -347,9 +353,9 @@ export default function Home() {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "18px",
+              gap: "16px",
               color: "#cbd5e1",
-              fontSize: "21px"
+              fontSize: "20px"
             }}
           >
             <div>📞 +30 69XX XXX XXX</div>
@@ -366,12 +372,12 @@ export default function Home() {
       {/* FOOTER */}
       <footer
         style={{
-          padding: "25px 40px",
           borderTop: "1px solid rgba(255,255,255,0.06)",
-          color: "#94a3b8",
+          padding: "25px 40px",
           display: "flex",
           justifyContent: "space-between",
-          fontSize: "18px"
+          color: "#94a3b8",
+          fontSize: "17px"
         }}
       >
         <div>© 2024 NS Engineering. Όλα τα δικαιώματα διατηρούνται.</div>
@@ -399,27 +405,27 @@ const topBtn = {
   borderRadius: "12px",
   textDecoration: "none",
   fontWeight: "bold",
-  fontSize: "17px"
+  fontSize: "16px"
 };
 
-const heroBtn = {
+const mainBtn = {
   background: "#4361ee",
   color: "white",
   padding: "18px 30px",
   borderRadius: "14px",
   textDecoration: "none",
   fontWeight: "bold",
-  fontSize: "20px"
+  fontSize: "19px"
 };
 
-const heroOutline = {
-  border: "1px solid rgba(255,255,255,0.25)",
+const outlineBtn = {
+  border: "1px solid rgba(255,255,255,0.2)",
   color: "white",
   padding: "18px 30px",
   borderRadius: "14px",
   textDecoration: "none",
   fontWeight: "bold",
-  fontSize: "20px"
+  fontSize: "19px"
 };
 
 const contactBtn = {
@@ -429,5 +435,5 @@ const contactBtn = {
   borderRadius: "14px",
   textDecoration: "none",
   fontWeight: "bold",
-  fontSize: "20px"
+  fontSize: "19px"
 };
