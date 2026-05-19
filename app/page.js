@@ -1,18 +1,39 @@
-export default function Home() {
-  const services = [
-    "Πυρασφάλεια",
-    "Η/Μ Μελέτες",
-    "ΠΕΑ",
-    "ΥΔΕ",
-    "Ενεργειακές Λύσεις",
-    "Αυτοματισμοί",
-  ];
+import Link from "next/link";
 
+const services = [
+  {
+    title: "Πυρασφάλεια",
+    desc: "Μελέτες πυροπροστασίας, sprinkler και αδειοδοτήσεις.",
+  },
+  {
+    title: "Η/Μ Μελέτες",
+    desc: "Ολοκληρωμένες ηλεκτρομηχανολογικές λύσεις.",
+  },
+  {
+    title: "ΠΕΑ",
+    desc: "Πιστοποιητικά ενεργειακής απόδοσης και αναβαθμίσεις.",
+  },
+  {
+    title: "ΥΔΕ",
+    desc: "Υπεύθυνες δηλώσεις ηλεκτρολόγου εγκαταστάτη.",
+  },
+  {
+    title: "Ενεργειακές Λύσεις",
+    desc: "Αντλίες θερμότητας και σύγχρονες ενεργειακές εφαρμογές.",
+  },
+  {
+    title: "Αυτοματισμοί",
+    desc: "Έξυπνα συστήματα και αυτοματισμοί εγκαταστάσεων.",
+  },
+];
+
+export default function Home() {
   return (
     <main
       style={{
-        background: "#060b16",
+        background: "#050816",
         color: "white",
+        minHeight: "100vh",
         fontFamily: "Arial, sans-serif",
       }}
     >
@@ -23,22 +44,40 @@ export default function Home() {
           top: 0,
           width: "100%",
           zIndex: 100,
+          background: "rgba(5,8,22,0.85)",
           backdropFilter: "blur(12px)",
-          background: "rgba(6,11,22,0.7)",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
         }}
       >
         <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "1300px",
             margin: "0 auto",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "20px",
+            padding: "22px 20px",
           }}
         >
-          <h2 style={{ margin: 0 }}>NS Engineering</h2>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+            }}
+          >
+            <div
+              style={{
+                width: "42px",
+                height: "42px",
+                borderRadius: "12px",
+                background:
+                  "linear-gradient(135deg,#2563eb,#38bdf8)",
+              }}
+            />
+
+            <h2 style={{ margin: 0 }}>NS Engineering</h2>
+          </div>
 
           <nav
             style={{
@@ -49,6 +88,10 @@ export default function Home() {
           >
             <a href="#services" style={linkStyle}>
               Υπηρεσίες
+            </a>
+
+            <a href="#projects" style={linkStyle}>
+              Έργα
             </a>
 
             <a href="#about" style={linkStyle}>
@@ -68,39 +111,40 @@ export default function Home() {
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
           padding: "140px 20px 80px",
           background:
-            "radial-gradient(circle at top right, rgba(59,130,246,0.25), transparent 30%), linear-gradient(135deg,#060b16,#0f172a)",
+            "radial-gradient(circle at top right, rgba(37,99,235,0.25), transparent 25%), linear-gradient(135deg,#050816,#0f172a)",
         }}
       >
         <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "1300px",
+            margin: "0 auto",
             width: "100%",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
-            gap: "60px",
+            gap: "70px",
             alignItems: "center",
           }}
         >
+          {/* LEFT */}
           <div>
             <div
               style={{
-                color: "#60a5fa",
+                color: "#38bdf8",
+                fontWeight: "bold",
                 marginBottom: "18px",
                 letterSpacing: "1px",
-                fontWeight: "bold",
               }}
             >
-              ΜΗΧΑΝΟΛΟΓΙΚΕΣ & ΕΝΕΡΓΕΙΑΚΕΣ ΛΥΣΕΙΣ
+              ΜΗΧΑΝΟΛΟΓΟΣ ΜΗΧΑΝΙΚΟΣ
             </div>
 
             <h1
               style={{
-                fontSize: "72px",
+                fontSize: "82px",
                 lineHeight: 1,
-                marginBottom: "24px",
+                marginBottom: "28px",
               }}
             >
               NS
@@ -112,24 +156,25 @@ export default function Home() {
               style={{
                 color: "#cbd5e1",
                 fontSize: "22px",
-                lineHeight: 1.7,
-                maxWidth: "600px",
+                lineHeight: 1.8,
+                maxWidth: "650px",
               }}
             >
-              Σύγχρονες μελέτες, πυρασφάλεια, Η/Μ λύσεις και ενεργειακές
-              υπηρεσίες με επαγγελματισμό και αξιοπιστία.
+              Σύγχρονες μηχανολογικές, ενεργειακές και
+              πυροπροστασίας λύσεις με επαγγελματισμό,
+              αξιοπιστία και τεχνική υπευθυνότητα.
             </p>
 
             <div
               style={{
                 display: "flex",
-                gap: "16px",
-                marginTop: "40px",
+                gap: "18px",
+                marginTop: "45px",
                 flexWrap: "wrap",
               }}
             >
               <a href="#services" style={primaryButton}>
-                Οι Υπηρεσίες μας
+                Υπηρεσίες
               </a>
 
               <a href="#contact" style={secondaryButton}>
@@ -138,43 +183,56 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
+          {/* RIGHT */}
           <div>
             <div
               style={{
+                height: "560px",
+                borderRadius: "32px",
+                overflow: "hidden",
+                position: "relative",
                 background:
-                  "linear-gradient(135deg, rgba(30,41,59,0.95), rgba(15,23,42,0.9))",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "28px",
-                padding: "40px",
-                boxShadow: "0 20px 60px rgba(0,0,0,0.45)",
+                  "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop') center/cover",
+                boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
               }}
             >
               <div
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "20px",
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "linear-gradient(to top, rgba(5,8,22,0.7), transparent)",
+                }}
+              />
+
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "30px",
+                  left: "30px",
                 }}
               >
-                <div style={statCard}>
-                  <h3 style={statNumber}>10+</h3>
-                  <p style={statText}>Χρόνια Εμπειρίας</p>
-                </div>
+                <div
+                  style={{
+                    background: "rgba(255,255,255,0.1)",
+                    backdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    borderRadius: "20px",
+                    padding: "22px",
+                  }}
+                >
+                  <h3 style={{ marginTop: 0 }}>
+                    Πλήρεις Τεχνικές Λύσεις
+                  </h3>
 
-                <div style={statCard}>
-                  <h3 style={statNumber}>300+</h3>
-                  <p style={statText}>Ολοκληρωμένα Έργα</p>
-                </div>
-
-                <div style={statCard}>
-                  <h3 style={statNumber}>24/7</h3>
-                  <p style={statText}>Υποστήριξη</p>
-                </div>
-
-                <div style={statCard}>
-                  <h3 style={statNumber}>100%</h3>
-                  <p style={statText}>Επαγγελματισμός</p>
+                  <p
+                    style={{
+                      color: "#dbeafe",
+                      marginBottom: 0,
+                    }}
+                  >
+                    Μελέτες • Πυρασφάλεια • Ενεργειακά
+                  </p>
                 </div>
               </div>
             </div>
@@ -186,13 +244,23 @@ export default function Home() {
       <section
         id="services"
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1300px",
           margin: "0 auto",
           padding: "120px 20px",
         }}
       >
-        <div style={{ textAlign: "center", marginBottom: "70px" }}>
-          <h2 style={{ fontSize: "52px", marginBottom: "20px" }}>
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "70px",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "58px",
+              marginBottom: "20px",
+            }}
+          >
             Υπηρεσίες
           </h2>
 
@@ -200,53 +268,138 @@ export default function Home() {
             style={{
               color: "#94a3b8",
               fontSize: "20px",
-              maxWidth: "700px",
+              maxWidth: "750px",
               margin: "0 auto",
-              lineHeight: 1.7,
+              lineHeight: 1.8,
             }}
           >
-            Ολοκληρωμένες λύσεις μηχανολογικών, ενεργειακών και
-            πυροπροστασίας μελετών.
+            Ολοκληρωμένες υπηρεσίες μηχανολογικού
+            σχεδιασμού και τεχνικών εφαρμογών.
           </p>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-            gap: "24px",
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(320px,1fr))",
+            gap: "28px",
           }}
         >
           {services.map((service, index) => (
             <div
               key={index}
               style={{
-                background: "#0f172a",
-                border: "1px solid rgba(255,255,255,0.06)",
-                borderRadius: "24px",
-                padding: "35px",
+                background:
+                  "linear-gradient(135deg,#111827,#0f172a)",
+                borderRadius: "28px",
+                overflow: "hidden",
+                border:
+                  "1px solid rgba(255,255,255,0.06)",
               }}
             >
               <div
                 style={{
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "18px",
-                  background: "rgba(59,130,246,0.15)",
-                  marginBottom: "25px",
+                  height: "220px",
+                  background:
+                    "url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop') center/cover",
                 }}
               />
 
-              <h3 style={{ fontSize: "26px", marginBottom: "14px" }}>
-                {service}
-              </h3>
+              <div style={{ padding: "32px" }}>
+                <h3
+                  style={{
+                    fontSize: "28px",
+                    marginBottom: "14px",
+                  }}
+                >
+                  {service.title}
+                </h3>
 
-              <p style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-                Επαγγελματικές λύσεις με αξιοπιστία, σύγχρονη τεχνογνωσία και
-                πλήρη τεχνική υποστήριξη.
-              </p>
+                <p
+                  style={{
+                    color: "#94a3b8",
+                    lineHeight: 1.8,
+                    marginBottom: "28px",
+                  }}
+                >
+                  {service.desc}
+                </p>
+
+                <button style={cardButton}>
+                  Περισσότερα
+                </button>
+              </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section
+        id="projects"
+        style={{
+          background: "#0b1220",
+          padding: "120px 20px",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1300px",
+            margin: "0 auto",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "58px",
+              marginBottom: "70px",
+              textAlign: "center",
+            }}
+          >
+            Πρόσφατα Έργα
+          </h2>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns:
+                "repeat(auto-fit,minmax(320px,1fr))",
+              gap: "28px",
+            }}
+          >
+            {[1, 2, 3].map((item) => (
+              <div
+                key={item}
+                style={{
+                  borderRadius: "28px",
+                  overflow: "hidden",
+                  background: "#111827",
+                }}
+              >
+                <div
+                  style={{
+                    height: "260px",
+                    background:
+                      "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop') center/cover",
+                  }}
+                />
+
+                <div style={{ padding: "28px" }}>
+                  <h3>Τεχνικό Έργο #{item}</h3>
+
+                  <p
+                    style={{
+                      color: "#94a3b8",
+                      lineHeight: 1.8,
+                    }}
+                  >
+                    Σύγχρονη τεχνική μελέτη και υλοποίηση
+                    με έμφαση στην ποιότητα και ασφάλεια.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -255,7 +408,6 @@ export default function Home() {
         id="about"
         style={{
           padding: "120px 20px",
-          background: "#0b1220",
         }}
       >
         <div
@@ -265,8 +417,13 @@ export default function Home() {
             textAlign: "center",
           }}
         >
-          <h2 style={{ fontSize: "52px", marginBottom: "30px" }}>
-            Μηχανική με Υπευθυνότητα
+          <h2
+            style={{
+              fontSize: "58px",
+              marginBottom: "30px",
+            }}
+          >
+            Σύγχρονη Μηχανική
           </h2>
 
           <p
@@ -274,12 +431,12 @@ export default function Home() {
               fontSize: "22px",
               lineHeight: 1.9,
               color: "#cbd5e1",
-              maxWidth: "850px",
-              margin: "0 auto",
             }}
           >
-            Η NS Engineering παρέχει σύγχρονες τεχνικές λύσεις με έμφαση στην
-            ποιότητα, την αξιοπιστία και την άμεση εξυπηρέτηση κάθε έργου.
+            Η NS Engineering προσφέρει ολοκληρωμένες
+            τεχνικές υπηρεσίες με υψηλή αισθητική,
+            σύγχρονη τεχνογνωσία και υπεύθυνη
+            επαγγελματική προσέγγιση.
           </p>
         </div>
       </section>
@@ -295,15 +452,21 @@ export default function Home() {
           style={{
             maxWidth: "1000px",
             margin: "0 auto",
+            borderRadius: "36px",
+            padding: "70px 40px",
             background:
               "linear-gradient(135deg,#111827,#0f172a)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "32px",
-            padding: "60px 40px",
+            border:
+              "1px solid rgba(255,255,255,0.08)",
             textAlign: "center",
           }}
         >
-          <h2 style={{ fontSize: "52px", marginBottom: "20px" }}>
+          <h2
+            style={{
+              fontSize: "56px",
+              marginBottom: "20px",
+            }}
+          >
             Επικοινωνία
           </h2>
 
@@ -311,19 +474,19 @@ export default function Home() {
             style={{
               color: "#94a3b8",
               fontSize: "20px",
-              marginBottom: "40px",
+              marginBottom: "50px",
             }}
           >
-            Επικοινωνήστε μαζί μας για μελέτες, αδειοδοτήσεις και τεχνικές
-            λύσεις.
+            Επικοινωνήστε μαζί μας για μελέτες,
+            αδειοδοτήσεις και τεχνικές λύσεις.
           </p>
 
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "16px",
-              fontSize: "20px",
+              gap: "18px",
+              fontSize: "22px",
             }}
           >
             <div>📞 +30 69XX XXX XXX</div>
@@ -344,7 +507,7 @@ const linkStyle = {
 const primaryButton = {
   background: "#2563eb",
   color: "white",
-  padding: "16px 28px",
+  padding: "18px 34px",
   borderRadius: "14px",
   textDecoration: "none",
   fontWeight: "bold",
@@ -353,26 +516,18 @@ const primaryButton = {
 const secondaryButton = {
   border: "1px solid rgba(255,255,255,0.2)",
   color: "white",
-  padding: "16px 28px",
+  padding: "18px 34px",
   borderRadius: "14px",
   textDecoration: "none",
   fontWeight: "bold",
 };
 
-const statCard = {
-  background: "rgba(255,255,255,0.03)",
-  borderRadius: "20px",
-  padding: "28px",
-  border: "1px solid rgba(255,255,255,0.06)",
-};
-
-const statNumber = {
-  fontSize: "42px",
-  margin: "0 0 10px",
-  color: "#60a5fa",
-};
-
-const statText = {
-  color: "#cbd5e1",
-  margin: 0,
+const cardButton = {
+  background: "#2563eb",
+  color: "white",
+  border: "none",
+  padding: "14px 24px",
+  borderRadius: "12px",
+  fontWeight: "bold",
+  cursor: "pointer",
 };
