@@ -1,33 +1,54 @@
-import Link from "next/link";
-
-const services = [
-  {
-    title: "Πυρασφάλεια",
-    desc: "Μελέτες πυροπροστασίας, sprinkler και αδειοδοτήσεις.",
-  },
-  {
-    title: "Η/Μ Μελέτες",
-    desc: "Ολοκληρωμένες ηλεκτρομηχανολογικές λύσεις.",
-  },
-  {
-    title: "ΠΕΑ",
-    desc: "Πιστοποιητικά ενεργειακής απόδοσης και αναβαθμίσεις.",
-  },
-  {
-    title: "ΥΔΕ",
-    desc: "Υπεύθυνες δηλώσεις ηλεκτρολόγου εγκαταστάτη.",
-  },
-  {
-    title: "Ενεργειακές Λύσεις",
-    desc: "Αντλίες θερμότητας και σύγχρονες ενεργειακές εφαρμογές.",
-  },
-  {
-    title: "Αυτοματισμοί",
-    desc: "Έξυπνα συστήματα και αυτοματισμοί εγκαταστάσεων.",
-  },
-];
-
 export default function Home() {
+  const services = [
+    {
+      title: "Πυρασφάλεια",
+      image:
+        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
+      desc:
+        "Μελέτες πυροπροστασίας, sprinkler, πυρανίχνευση και ολοκληρωμένες λύσεις ενεργητικής και παθητικής πυρασφάλειας για επαγγελματικούς χώρους και κτίρια.",
+    },
+
+    {
+      title: "Η/Μ Μελέτες",
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+      desc:
+        "Σχεδιασμός και μελέτες ηλεκτρομηχανολογικών εγκαταστάσεων με σύγχρονη προσέγγιση και τεχνική αξιοπιστία.",
+    },
+
+    {
+      title: "ΠΕΑ",
+      image:
+        "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop",
+      desc:
+        "Έκδοση Πιστοποιητικών Ενεργειακής Απόδοσης για κατοικίες και επαγγελματικούς χώρους με γρήγορη και αξιόπιστη εξυπηρέτηση.",
+    },
+
+    {
+      title: "ΥΔΕ",
+      image:
+        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop",
+      desc:
+        "Υπεύθυνες Δηλώσεις Ηλεκτρολόγου Εγκαταστάτη για κατοικίες, επαγγελματικούς χώρους και επιχειρήσεις.",
+    },
+
+    {
+      title: "Ενεργειακές Λύσεις",
+      image:
+        "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop",
+      desc:
+        "Σύγχρονες ενεργειακές εφαρμογές, αντλίες θερμότητας και λύσεις εξοικονόμησης ενέργειας υψηλής απόδοσης.",
+    },
+
+    {
+      title: "Αυτοματισμοί",
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+      desc:
+        "Έξυπνα συστήματα αυτοματισμού και τεχνικές λύσεις για σύγχρονες εγκαταστάσεις και κτίρια.",
+    },
+  ];
+
   return (
     <main
       style={{
@@ -63,27 +84,28 @@ export default function Home() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "12px",
+              gap: "14px",
             }}
           >
             <div
               style={{
-                width: "42px",
-                height: "42px",
-                borderRadius: "12px",
+                width: "44px",
+                height: "44px",
+                borderRadius: "14px",
                 background:
                   "linear-gradient(135deg,#2563eb,#38bdf8)",
               }}
             />
 
-            <h2 style={{ margin: 0 }}>NS Engineering</h2>
+            <h2 style={{ margin: 0 }}>
+              NS Engineering
+            </h2>
           </div>
 
           <nav
             style={{
               display: "flex",
               gap: "28px",
-              fontSize: "15px",
             }}
           >
             <a href="#services" style={linkStyle}>
@@ -111,7 +133,7 @@ export default function Home() {
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
-          padding: "140px 20px 80px",
+          padding: "140px 20px 100px",
           background:
             "radial-gradient(circle at top right, rgba(37,99,235,0.25), transparent 25%), linear-gradient(135deg,#050816,#0f172a)",
         }}
@@ -122,7 +144,8 @@ export default function Home() {
             margin: "0 auto",
             width: "100%",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(320px,1fr))",
             gap: "70px",
             alignItems: "center",
           }}
@@ -142,7 +165,7 @@ export default function Home() {
 
             <h1
               style={{
-                fontSize: "82px",
+                fontSize: "84px",
                 lineHeight: 1,
                 marginBottom: "28px",
               }}
@@ -192,8 +215,9 @@ export default function Home() {
                 overflow: "hidden",
                 position: "relative",
                 background:
-                  "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop') center/cover",
-                boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
+                  "url('https://images.unsplash.com/photo-1581092919535-7146ff1a590b?q=80&w=1200&auto=format&fit=crop') center/cover",
+                boxShadow:
+                  "0 30px 80px rgba(0,0,0,0.5)",
               }}
             >
               <div
@@ -216,13 +240,14 @@ export default function Home() {
                   style={{
                     background: "rgba(255,255,255,0.1)",
                     backdropFilter: "blur(10px)",
-                    border: "1px solid rgba(255,255,255,0.15)",
+                    border:
+                      "1px solid rgba(255,255,255,0.15)",
                     borderRadius: "20px",
                     padding: "22px",
                   }}
                 >
                   <h3 style={{ marginTop: 0 }}>
-                    Πλήρεις Τεχνικές Λύσεις
+                    Smart Engineering
                   </h3>
 
                   <p
@@ -231,7 +256,7 @@ export default function Home() {
                       marginBottom: 0,
                     }}
                   >
-                    Μελέτες • Πυρασφάλεια • Ενεργειακά
+                    ΠΕΑ • Πυρασφάλεια • Η/Μ Μελέτες
                   </p>
                 </div>
               </div>
@@ -274,7 +299,8 @@ export default function Home() {
             }}
           >
             Ολοκληρωμένες υπηρεσίες μηχανολογικού
-            σχεδιασμού και τεχνικών εφαρμογών.
+            σχεδιασμού, πυρασφάλειας και ενεργειακών
+            εφαρμογών.
           </p>
         </div>
 
@@ -300,17 +326,16 @@ export default function Home() {
             >
               <div
                 style={{
-                  height: "220px",
-                  background:
-                    "url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop') center/cover",
+                  height: "240px",
+                  background: `url(${service.image}) center/cover`,
                 }}
               />
 
               <div style={{ padding: "32px" }}>
                 <h3
                   style={{
-                    fontSize: "28px",
-                    marginBottom: "14px",
+                    fontSize: "30px",
+                    marginBottom: "16px",
                   }}
                 >
                   {service.title}
@@ -319,8 +344,8 @@ export default function Home() {
                 <p
                   style={{
                     color: "#94a3b8",
-                    lineHeight: 1.8,
-                    marginBottom: "28px",
+                    lineHeight: 1.9,
+                    marginBottom: "30px",
                   }}
                 >
                   {service.desc}
@@ -393,8 +418,9 @@ export default function Home() {
                       lineHeight: 1.8,
                     }}
                   >
-                    Σύγχρονη τεχνική μελέτη και υλοποίηση
-                    με έμφαση στην ποιότητα και ασφάλεια.
+                    Σύγχρονη τεχνική μελέτη και
+                    επαγγελματική υποστήριξη με έμφαση
+                    στην ποιότητα και ασφάλεια.
                   </p>
                 </div>
               </div>
@@ -434,9 +460,9 @@ export default function Home() {
             }}
           >
             Η NS Engineering προσφέρει ολοκληρωμένες
-            τεχνικές υπηρεσίες με υψηλή αισθητική,
-            σύγχρονη τεχνογνωσία και υπεύθυνη
-            επαγγελματική προσέγγιση.
+            τεχνικές υπηρεσίες με σύγχρονη τεχνογνωσία,
+            επαγγελματισμό και υπεύθυνη προσέγγιση σε
+            κάθε έργο.
           </p>
         </div>
       </section>
